@@ -19,14 +19,6 @@ google:
     scope: profile email
   resource:
     userInfoUri:  https://www.googleapis.com/oauth2/v3/userinfo
-linkedIn:
-  client:
-    clientId: 771mrzk94hye1w
-    clientSecret: iIJFgBf9lCb18zYe
-    accessTokenUri: https://www.linkedin.com/oauth/v2/accessToken
-    userAuthorizationUri: https://www.linkedin.com/oauth/v2/authorization
-  resource:
-    userInfoUri: https://api.linkedin.com/v1/people/~?format=json
 twitter:
   client:
     clientId: oXJIDGVdB0PDnMICDwKckyzKm
@@ -40,3 +32,5 @@ twitter:
     
 server:
   port: 3000
+
+#TODO: Por si bota error con el mvn wrapper: mvn -N io.takari:maven:wrapper
