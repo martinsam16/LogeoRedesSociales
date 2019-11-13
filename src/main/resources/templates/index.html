@@ -8,22 +8,20 @@
 <h1>Este es mi sitio protegido xd</h1>
 <p th:text="${usuario.principal.authorities[0].attributes.name}"></p>
 <p th:text="${usuario.principal.authorities[0].attributes.email}"></p>
-<a th:href="@{'usuario/agregar/' +${usuario.principal.authorities[0].attributes.name} +'/'  + ${usuario.principal.authorities[0].attributes.email}">
-    <span>Agrégame</span>
-</a>
+<form action="#" th:action="@{'usuario/agregar/' +${usuario.principal.authorities[0].attributes.name} +'/'  + ${usuario.principal.authorities[0].attributes.email}}" method="post">
+    <input type="submit" />
+</form>
 
 <table>
     <tr>
         <th>Id</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Action</th>
+        <th>Nombres</th>
+        <th>Correo</th>
     </tr>
     <tr th:each="u : ${usuarios}">
-        <td th:text="${u.id}">Id</td>
-        <td th:text="${u.nombres}">Nombres</td>
-        <td th:text="${u.email}">Correo</td>
+        <td th:text="${u.id}"></td>
+        <td th:text="${u.nombres}"></td>
+        <td th:text="${u.email}"></td>
     </tr>
 </table>
 </body>

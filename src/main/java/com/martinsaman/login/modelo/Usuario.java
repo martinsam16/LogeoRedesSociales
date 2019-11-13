@@ -17,8 +17,17 @@ public class Usuario implements Serializable {
     @Column(length = 50, nullable = false)
     private String email;
 
-    @Column(length = 50, nullable = false)
+    @Column(length = 100, nullable = false)
     private String nombres;
+
+    public Usuario(){
+
+    }
+
+    public Usuario(String email, String nombres) {
+        this.email = email;
+        this.nombres = nombres;
+    }
 
     public int getId() {
         return id;

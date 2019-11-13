@@ -61,11 +61,10 @@
             <artifactId>HikariCP</artifactId>
             <version>2.6.0</version>
         </dependency>
-
         <dependency>
-            <groupId>com.github.noraui</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0.2</version>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>7.2.1.jre8</version>
         </dependency>
 
         <dependency>
@@ -94,12 +93,4 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <url>http://nexus.saas.hand-china.com/content/repositories/rdc/</url>
-            <id>oracle</id>
-            <layout>default</layout>
-            <name>Oracle Driver JDBC</name>
-        </repository>
-    </repositories>
 </project>

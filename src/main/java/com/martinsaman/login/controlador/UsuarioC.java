@@ -1,6 +1,5 @@
 package com.martinsaman.login.controlador;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.martinsaman.login.modelo.Usuario;
 import com.martinsaman.login.repo.IUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +32,9 @@ public class UsuarioC {
     public String agregarUsuario(@PathVariable(name = "nombres") String nombres, @PathVariable(name = "email") String email){
         Optional<Usuario> usuario = usuarioRepo.findOneByEmail(email);
         if (!usuario.isPresent()){
-            usuarioRepo.save(usuario.get());
+            usuarioRepo.save(new Usuario(email, nombres));
         }
-        return "index";
+        return "redirect:/";
     }
 
 }
