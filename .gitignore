@@ -29,8 +29,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/.mvn
-/.vscode
-/target
-/hs_err_pid10140.log
-/replay_pid10140.log
